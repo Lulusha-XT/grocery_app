@@ -1,0 +1,48 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Grocery App",
+    "description": "Grocery App - Flutter/NodeJS Series",
+    "license": {
+      "name": "MIT",
+      "url": "http://opensource.org/license/MIT"
+    }
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "tag": [
+    {
+      "name": "Category",
+      "description": "Category API"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produce": ["application/json"],
+  "path": {
+    "/api/category": {
+      "get": {
+        "tag": ["Category"],
+        "summery": ["Get all Category"],
+        "parametrs": [
+          {
+            "name": "categoryName",
+            "in": "query",
+            "required": false,
+            "description": "Category Name",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "description": "Page Number",
+            "type": "integer",
+            "default": 1
+          }
+        ]
+      }
+    }
+  }
+}
